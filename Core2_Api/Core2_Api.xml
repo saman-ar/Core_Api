@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Core_Api</name>
+    </assembly>
+    <members>
+        <member name="M:Core2_Api.Controllers.InfoController.GetInfo">
+            <summary>
+            Get Hotel Info
+            </summary>
+            <remarks>
+            Sample request:
+            
+                INFO /Todo
+                {
+                   "id": 1,
+                   "name": "Item1",
+                   "isComplete": true
+                }
+            </remarks>
+            <returns>List of links to Rooms and Hotels</returns>
+        </member>
+        <member name="T:Core2_Api.Controllers.RoomsController">
+            برای اینکه نامگذاری route ها بصورت یکجا تعریف شود 
+            میتوان انرا روی controller بصورت زیر تعریف کرد
+        </member>
+        <member name="M:Core2_Api.Controllers.UserController.Login(Core2_Api.Dtos.UserLoginDto)">
+            <summary>
+            Login Path
+            </summary>
+            <param name="userDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Core2_Api.Controllers.UserController.RegisterUser(Core2_Api.Dtos.UserRegisterDto)">
+            <summary>
+            Register Path
+            </summary>
+            <param name="userDto"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Core2_Api.Dtos.Room.Id">
+            دراین کلاس id را نیاورده ایم زیرا
+            href  نقش انرا بازی میکند
+            href در کلاس resource قرار دارد
+        </member>
+        <member name="M:Core2_Api.Models.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Core2_Api.Models.AppDbContext})">
+            متد سازنده
+        </member>
+        <member name="T:Core2_Api.Models.SortOptions`2">
+            متد مربوطه یعنی اعمال orderBy در خود Model قرار داده شده است
+        </member>
+        <member name="M:Core2_Api.Models.SortOptions`2.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            برای انترفیس IValidatableObject استفاده میشود و توسط آن فراخوانی میشود
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Core2_Api.Models.SortTerm.ToSortLinqExpression(System.Collections.Generic.IEnumerable{Core2_Api.Models.SortTerm})">
+            قابل استفاده است ولی استفاده نکردیم
+        </member>
+        <member name="T:Core2_Api.Infra.AppException">
+            برای درک و استفاده از کلاس excepton نوشته شده است 
+            و در صورت نیاز تکمیل شود
+        </member>
+        <member name="T:Core2_Api.Infra.ApiResult2">
+            <summary>
+            از فیلم نوشته شده بود و جالبشو نوشتم
+            در فایل ApiResult
+            </summary>
+        </member>
+        <member name="T:Core2_Api.Infra.AppApiController">
+            <summary>
+            نوشتن یک کنترلر اختصاصی برای api
+            بطوریکه متدهای okو notfound و badrequest
+            و غیره خروجی مورد نظر ما رو داشته باشند و قابلیتهای قبلی خود رو هم
+            داشته باشند
+            </summary>
+        </member>
+        <member name="T:Core2_Api.Infra.AppExceptionHandlerMiddleware">
+            <summary>
+            middleware که برای هندل کردن Exception استفاده میشود
+            </summary>
+        </member>
+        <member name="T:Core2_Api.Infra.MappingProfile">
+            برای هماهنگی با فیلم ورزن 6.0.2 را نصب کردم
+        </member>
+        <member name="T:Core2_Api.Infra.DynamicLinqExpressions">
+            میخواستم بصورت جنریک باشه که نتونستم تکمیل کنم
+        </member>
+        <member name="T:Core2_Api.Infra.AppExceptionFilterAttribute">
+            بجای این مورد اگر middleware بنویسیم عالی میشه
+            چون این فیلتر فقط خطاهای داخل متد و کنترلر را دریافت میکند 
+            و به خطاهایی که در جاهای غیر از اینها اتفاق می افتد کاری ندارد
+        </member>
+        <member name="T:Core2_Api.Infra.OkApiResultTest">
+            <summary>
+            جایگزین کردن کلاس زیر با کلاس اصلی استفاده شده
+            در متد Ok
+            که البته نتونستم سرتهش رو جمع کنم
+            </summary>
+        </member>
+        <member name="T:Core2_Api.Infra.SortableAttribute">
+            <summary>
+            فیلد را برای شرکت در مرتب سازی معرفی می کند
+            </summary>
+        </member>
+        <member name="M:Core2_Api.Infra.Utility.PlurizeTableName(Microsoft.EntityFrameworkCore.ModelBuilder,System.String)">
+            plurize name of a table
+        </member>
+        <member name="M:Core2_Api.Infra.Utility.SingularTablesName(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            singular table name for one table
+        </member>
+        <member name="M:Core2_Api.Infra.Utility.SingularTableName(Microsoft.EntityFrameworkCore.ModelBuilder,System.String)">
+            for one table
+        </member>
+    </members>
+</doc>

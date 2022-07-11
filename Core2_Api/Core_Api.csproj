@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Core2_Api.xml</DocumentationFile>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\v2\**" />
+    <Content Remove="Controllers\v2\**" />
+    <EmbeddedResource Remove="Controllers\v2\**" />
+    <None Remove="Controllers\v2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ErrorsController.cs" />
+    <Compile Remove="Controllers\RoomsController - Copy.cs" />
+    <Compile Remove="Controllers\RootController.cs" />
+    <Compile Remove="Infra\Swagger\Class.cs" />
+    <Compile Remove="Infra\Swagger\MySwagerGenerator.cs" />
+    <Compile Remove="Infra\Swagger\SchemaRepository.cs" />
+    <Compile Remove="Migrations\20201101082726_AddSecurityStamp.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.0.2" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="2.0.1" />
+    <PackageReference Include="BCrypt-Official" Version="0.1.109" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.DynamicLinq" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="6.0.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Swashbuckle.AspNetCore.SwaggerGen">
+      <HintPath>C:\Users\XYZ\.nuget\packages\swashbuckle.aspnetcore.swaggergen\5.6.3\lib\netstandard2.0\Swashbuckle.AspNetCore.SwaggerGen.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
